@@ -48,3 +48,12 @@ search_path = ["<PATH>", "<PYENV>"]
 [python-infer]
 # 2.17 is transitioning to a new, faster parser for dependency inference:
 use_rust_parser = true
+
+[environments-preview.names]
+local = "//:local_env"
+docker = "//:docker_env"
+
+[test]
+extra_env_vars = [
+  "CFG",
+]
